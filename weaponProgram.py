@@ -16,7 +16,7 @@ HINT: Follow the comments for each line to help with the logic of the problem.
 
 # create a file object to open the file in read mode
 
-weapons = open("weapons.txt", "r")
+weapons = open("weapons.csv", "r")
 
 # create a csv object from the file object
 
@@ -29,10 +29,11 @@ next(weapons_file)
 
 #create an empty dictionary named 'weapons_dict'
 
-
+weapons_dict = {}
 
 
 #use a for loop to iterate through every row of the csv file
+for i in weapons_dict[]:
 
     #use variables for name,speed and range (optional)
     
