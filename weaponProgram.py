@@ -16,15 +16,15 @@ HINT: Follow the comments for each line to help with the logic of the problem.
 
 # create a file object to open the file in read mode
 
-
+weapons = open("weapons.txt", "r")
 
 # create a csv object from the file object
 
-
+weapons_file = csv.reader(weapons, delimiter=",")
 
 #skip the header row
 
-
+next(weapons_file)
 
 
 #create an empty dictionary named 'weapons_dict'
