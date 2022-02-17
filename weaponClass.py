@@ -26,13 +26,37 @@ import random
 
 
 class Weapon:
-    def __init__(self, bullets, speed, range, status):
-        self.__numbullets = bullets
+    def __init__(self, name, speed, gunrange):
+        self.__gunname = name
+        self.__numbullets = 0
         self.__speedofbull = speed
-        self.__gunrange = range
-        self.__status = status
+        self.__gunrange = gunrange
+        self.__status = "Active"
 
-    def get__numbullets(self):
+    def set_gunname(self, name):
+        self.__gunname = name
+
+    def set_numbullets(self):
+        # set this equal to the random numbers, and eliminate
+        # the bullets variable since you initialized it to 0
+        self.__numbullets = random.randint(10, 100000)
+
+    def set_speedbull(self, speed):
+        self.__speedofbull = speed
+
+    def set_range(self, gunrange):
+        self.__gunrange = gunrange
+
+    def set_status(self):
+        if self.__numbullets == 0:
+            self.__status = "Inactive"
+        else:
+            self.__status = "Active"
+
+    def get_gunname(self):
+        return self.__gunname
+
+    def get_numbullets(self):
         return self.__numbullets
 
     def get_speedofbull(self):
@@ -44,17 +68,6 @@ class Weapon:
     def get_status(self):
         return self.__status
 
-    def fire_bullet(self, bullets):
-        self.__numbullets -= 1
+    def fire_bullet(self):
+        self.__numbullets = self.__numbullets - 1
         return self.__numbullets
-
-
-"""
-    def bullet_count(self):
-        if self.__numbullets = 0:
-            self.__status = "Inactive"
-        else:
-            return self.__numbullets
-
-
-"""
