@@ -83,4 +83,4 @@ for i in weapons_file:
 # using a loop print out the name and number of bullets from the dictionary
 for key, value in weapons_dict.items():
     print("Gun name:", key)
-    print("Number of bullets left:", value)
+    print("Number of bullets:", value)
