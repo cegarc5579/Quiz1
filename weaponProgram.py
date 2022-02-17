@@ -77,8 +77,7 @@ for i in weapons_file:
             my_weapon.fire_bullet()
             # print out the bullet count every time the weapon is fired
             print("Bullets remaining:", my_weapon.get_numbullets())
-        else:
-            print("There are no more bullets in the weapon")
+
 
 # using a loop print out the name and number of bullets from the dictionary
 for key, value in weapons_dict.items():
